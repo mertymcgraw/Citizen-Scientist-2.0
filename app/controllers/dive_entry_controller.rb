@@ -1,0 +1,2 @@
+class DiveEntryController < ApplicationController
+end
