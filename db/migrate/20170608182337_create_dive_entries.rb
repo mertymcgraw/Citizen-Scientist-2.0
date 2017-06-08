@@ -1,0 +1,17 @@
+class CreateDiveEntries < ActiveRecord::Migration[5.1]
+  def change
+    create_table :dive_entries do |t|
+      t.integer :diver_id, null: false
+      t.integer :location_id, null: false
+      t.string :dive_site, null: false
+      t.string :date, null: false
+      t.integer :dive_time, null: false
+      t.integer :depth, null: false
+      t.integer :temperature
+      t.integer :visibility
+      t.string :notes
+
+      t.timestamps
+    end
+  end
+end
