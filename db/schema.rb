@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170608211158) do
+ActiveRecord::Schema.define(version: 20170609205115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20170608211158) do
   end
 
   create_table "dive_entry_photos", force: :cascade do |t|
-    t.integer "dive_entry_id", null: false
     t.string "dive_photo", null: false
+    t.integer "dive_entry_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -69,7 +69,12 @@ ActiveRecord::Schema.define(version: 20170608211158) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "models", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "dive_certification", null: false
+    t.string "profile_picture"
+    t.string "cover_photo"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -82,20 +87,8 @@ ActiveRecord::Schema.define(version: 20170608211158) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_models_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "first_name", null: false
-    t.string "last_name", null: false
-    t.string "email", null: false
-    t.string "password_hash", null: false
-    t.string "dive_certification", null: false
-    t.string "profile_picture"
-    t.string "cover_photo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

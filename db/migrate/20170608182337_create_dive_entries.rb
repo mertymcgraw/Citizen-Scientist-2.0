@@ -11,7 +11,7 @@ class CreateDiveEntries < ActiveRecord::Migration[5.1]
       t.integer :visibility
       t.string :notes
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

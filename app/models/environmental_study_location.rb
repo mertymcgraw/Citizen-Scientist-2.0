@@ -1,4 +1,4 @@
-class EnvironmentalStudyLocation < ActiveRecord
+class EnvironmentalStudyLocation < ApplicationRecord
   belongs_to :location
   belongs_to :environmental_study
 

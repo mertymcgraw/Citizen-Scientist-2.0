@@ -1,4 +1,4 @@
-class EnvironmentalStudyResponse < ActiveRecord
+class EnvironmentalStudyResponse < ApplicationRecord
   belongs_to :environmental_study_question
   belongs_to :diver, :class_name => "User"
 
