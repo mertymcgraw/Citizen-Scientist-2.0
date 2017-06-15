@@ -1,1 +1,23 @@
 <h1>all dive entries</h1>
+<div class=log_book>
+  <% current_user.dive_entries.each do |entry|%>
+    <div class=primary_entry_data>
+      <h2> <%=entry.dive_site %> </h2>
+        <ul>
+          <li><%= entry.location.location_name %></li>
+          <li><%= entry.date%></li>
+        </ul>
+    </div>
+    <div class=secondary_entry_data>
+      <ul>
+        <li> Dive Time: <%= entry.dive_time %> mins</li>
+        <li> Max Depth: <%= entry.depth %> meters</li>
+        <li> Temperature: <%= entry.temperature %> degrees</li>
+        <li> Visibility: <%= entry.visibility %> meters</li>
+        <li> Notes: <%= entry.notes %> meters</li>
+      </ul>
+    </div>
+
+  <%end %>
+</div>
+
