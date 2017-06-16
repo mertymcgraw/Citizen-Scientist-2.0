@@ -4,15 +4,16 @@ class DiveEntriesController < ApplicationController
   end 
 
   def new
+    @dive_entry = DiveEntry.new
   end 
 
   def create
-    @new_dive_entry = DiveEntry.new(dive_entry_details)
-    p @new_dive_entry
-    if @new_dive_entry.save
+    @dive_entry = DiveEntry.new(dive_entry_details)
+    p @dive_entry
+    if @dive_entry.save
       redirect_to user_dive_entries_path
     else
-      @errors = @new_dive_entry.errors.full_messages
+      @errors = @dive_entry.errors.full_messages
       p @errors
       render 'new'
     end

@@ -1,14 +1,6 @@
 <h1>New dive entry</h1>
-    <div class="errors">
-      <% if @errors %>
-      <ul>
-        <% @errors.each do |error| %>
-          <li> <%= error %> </li>
-        <% end  %>
-      </ul>
-      <% end %>
-    </div>
-    
+  <%= render '/errors' %>
+
 <div class=new_dive_entry_>
   <%= form_for [@user, @dive_entry], url: user_dive_entries_path do |f| %>
     Dive Site: <%= f.text_field :dive_site %><br />
