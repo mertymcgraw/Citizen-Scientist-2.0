@@ -9,23 +9,27 @@ EnvironmentalStudyQuestion.destroy_all
 merty_details = {   :first_name => "Merty", :last_name=> "McGraw",
                     :dive_certification => "divemaster",
                     :email => "mertymcgraw@gmail.com",
-                    :password => "password"}
+                    :password => "password",
+                    :password_confirmation => "password"}
 
 jackie_details = {  :first_name => "Jackie", :last_name=> "McGraw",
                     :dive_certification => "open water",
                     :email => "jackiemcgraw@gmail.com",
-                    :password => "password"}
+                    :password => "password",
+                    :password_confirmation => "password"}
 
 sheila_details = {  :first_name => "Sheila", :last_name => "McGraw",
                     :dive_certification => "advanced open water",
                     :email => "sheilamcgraw@gmail.com",
-                    :password => "password"}
+                    :password => "password",
+                    :password_confirmation => "password"}
 
 
 haley_details = {   :first_name => "Haley", :last_name => "Kannall",
                     :dive_certification => "open water",
                     :email => "haleykannall@gmail.com",
-                    :password => "password"}
+                    :password => "password",
+                    :password_confirmation => "password"}
 
 User.create(merty_details)
 User.create(jackie_details)

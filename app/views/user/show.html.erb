@@ -1,3 +1,11 @@
 <h1> <%= current_user.first_name%>'s profile page</h1>
+<h2 class=lifetime_stats>Lifetime Dive Stats</h2>
+  <ul>
+    <li>Number of Dives: <%= @total_dives  %></li>
+    <li>Total Time Underwater: <%=  @total_time_underwater %> mins</li>
+    <li>Max Depth: <%= @max_depth  %> meters @ <%= @max_depth_location %></li>
+  </ul>
 
 <%= link_to('Dive Log', user_dive_entry_index_path(current_user))  %>
+
+

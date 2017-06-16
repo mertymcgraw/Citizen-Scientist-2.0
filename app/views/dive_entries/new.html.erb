@@ -1,0 +1,16 @@
+<h1>New dive entry</h1>
+  <%= render '/errors' %>
+
+<div class=new_dive_entry_>
+  <%= form_for [@user, @dive_entry], url: user_dive_entries_path do |f| %>
+    Dive Site: <%= f.text_field :dive_site %><br />
+    Location: <%= f.text_field :location %><br />
+    Date: <%= f.date_field :date %><br />
+    Dive Time: <%= f.number_field :dive_time %><br />
+    Max Depth: <%= f.number_field :depth %><br />
+    Temperature: <%= f.number_field :temperature %><br />
+    Visibility: <%= f.number_field :visibility %><br />
+    Notes: <%= f.text_area :notes %><br />
+    <%= f.submit "Save"%>
+  <% end %>
+</div>
