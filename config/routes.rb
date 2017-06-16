@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   resources :user, only: [:show] do 
-    resources :dive_entry
+    resources :dive_entries
   end
 
 end
