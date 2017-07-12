@@ -2,11 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 * {
   margin: 0;
   padding: 0
 }
-
 
 #vid-section {
   position: fixed;
@@ -15,9 +15,7 @@
   height: 100%;
   overflow: hidden;
   top: 0;
-  left: 0;
-  
-  
+  left: 0; 
 }
 
 #bgvideo {
@@ -65,4 +63,13 @@
 
 
 
+
+=======
+  min-width: 100%;
+  min_height: 100%;
+  
+  margin: 0;
+  padding: 0;
+
+}
 
