@@ -14,10 +14,13 @@
         <li> Max Depth: <%= entry.depth %> meters</li>
         <li> Temperature: <%= entry.temperature %> degrees</li>
         <li> Visibility: <%= entry.visibility %> meters</li>
-        <li> Notes: <%= entry.notes %> meters</li>
+        <li> Notes: <%= entry.notes %> </li>
       </ul>
     </div>
 
   <%end %>
 </div>
+<div class="add_new_dive_button">
+  <%= link_to('Add New Dive', new_user_dive_entry_path) %>
+</div>        
 
