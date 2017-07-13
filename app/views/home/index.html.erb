@@ -6,21 +6,28 @@
 </head>
 <body>
 
-  <div id=vid-section>
-     <video id="bgvideo" preload="auto" autoplay="true" loop="loop" muted="muted">
-      <source src="video/manta.mp4" type="video/mp4">
-      video not supported
-    </video>
-  </div>
+    <div id=vid-section>
+       <video id="bgvideo" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="video/manta.mp4" type="video/mp4">
+        video not supported
+      </video>
+    </div>
 
 
-  <div class=logo-section>
-    <img src="images/white-cs-logo.png">
+    <div class=logo-section>
+      <img src="images/white-cs-logo.png">
+    </div>
+
+    <div class=entry-buttons-section>
+    <%= render '/login_signin_logout' %>
+    </div>
+
+
+  <div class=about-us-sectino> 
+    <h1>About us</h1>
   </div>
 
    
-
-
 
 </body>
 </html>
