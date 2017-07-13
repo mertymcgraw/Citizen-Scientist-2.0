@@ -1,9 +1,12 @@
  <% if user_signed_in? %>
       <ul>
+
         <li class = entry-buttons >
           <a><%= link_to('Logout', destroy_user_session_path, method: :delete) %> </a>   
         </li>
+
       <% else %>
+
         <li class = entry-buttons>
           <a><%= link_to('Login', new_user_session_path)  %> </a> 
         </li>
@@ -11,5 +14,6 @@
         <li class = entry-buttons>
           <a><%= link_to('Sign up', new_user_registration_path)  %></a>  
         </li>
+        
       </ul>
-    <% end %>
+<% end %>
